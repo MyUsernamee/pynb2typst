@@ -143,4 +143,3 @@ def main() -> None:
 
     with open(output_filename, "w") as f:
         f.write(output)
-
