@@ -7,7 +7,13 @@ authors = [
     { email = "delanoleslieprof@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "ipython>=9.12.0",
+    "jupyter-client>=8.8.0",
+    "pillow>=12.2.0",
+    "tree-sitter>=0.25.2",
+    "tree-sitter-python>=0.25.0",
+]
 
 [project.scripts]
 pynb2typst = "pynb2typst:main"

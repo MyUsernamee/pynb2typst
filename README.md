@@ -8,7 +8,7 @@ The main goals of this script is to:
 - Render outputs to png's and embed them in the document.
 - Take any sypmy output convert it to typst and embed that in the document.
 
-# Dependencies
+# External Dependencies
 
 ```
 tylax
