@@ -50,10 +50,12 @@ def execute_code_segments(blocks, connection_file: None | Path = None, kernel_na
         results.append(None)
         if not block[1]:
             continue
-        reply = client.execute(block[0].decode())
+        client.execute(block[0].decode())
         while True:
             msg = client.get_iopub_msg()
 
+            if msg['msg_type'] == 'execute_input':
+                results[-1] = msg['content']
             if msg['msg_type'] == 'execute_result':
                 results[-1] = msg['content']
             if msg['msg_type'] == 'display_data':
